@@ -1,0 +1,9 @@
+{
+  "name": "lambda-ec2-timer-switch",
+  "description": "Timer Switcher for EC2",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "aws-sdk": "^2.2.31"
+  }
+}
