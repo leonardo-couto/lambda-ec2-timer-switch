@@ -109,7 +109,7 @@ Node.js and npm.
 
   Open the AWS Lambda console at https://console.aws.amazon.com/lambda/.
   
-  If a welcome page appears, choose Get Started Now. If the Lambda: Function list page appears, choose Create a Lambda function.
+  If a welcome page appears, choose Get Started Now. Else, choose Create a Lambda function.
   
   Choose Skip at the bottom of the Select blueprint pane.
   
