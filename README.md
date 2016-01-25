@@ -20,6 +20,53 @@ Node.js and npm.
   Run `npm install` in both `lambda-ec2-starter` and `lambda-ec2-stopper` folders.
 
   Zip the content of `lambda-ec2-starter` folder to a **starter.zip** file and the content of `lambda-ec2-stopper` to **stopper.zip**.
+  
+* **Create an execution role and policy**
+
+  Open the IAM console: https://console.aws.amazon.com/iam/.
+  
+  In the Details area, choose Policies.
+  
+  Choose Create Policy.
+  
+  Select Create Your Own Policy.
+  
+  Choose a name (e.g. LambdaEC2SwitcherPolicy) and a description
+  
+  Paste the JSON below in the Policy Document text area and then click on Create Policy.
+  
+  ```javascript
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "ec2:Describe*",
+          "ec2:Start*",
+          "ec2:RunInstances",
+          "ec2:Stop*",
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ],
+        "Resource": ["*"]
+      }
+    ]
+  }
+  ```
+  
+  In the Details area, choose Roles.
+  
+  Choose Create New Role.
+  
+  Use LambdaEC2SwitcherRole or some similar name to Role Name.
+  
+  Select AWS Lambda.
+  
+  Check the LambdaEC2SwitcherPolicy box in the policies list (use the filter to find it).
+  
+  Choose Next Step and then Create Role.
 
 * **Create a new Lambda function**
 
