@@ -10,7 +10,20 @@ Node.js and npm.
 
 ## HOWTO
 
-* **Create an IAM Role (Optional)**
+* **Create an IAM User (Optional)**
+
+  More info about creating IAM users:
+
+  http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html
+  http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html
+  
+  If you are creating a new user, you need at least the following permissions:
+  
+  ```javascript
+    {}
+  ```
+
+
 * **Build the zip archives**
 
   Fork and clone this project.
