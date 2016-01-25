@@ -74,7 +74,7 @@ Node.js and npm.
   
   If a welcome page appears, choose Get Started Now. If the Lambda: Function list page appears, choose Create a Lambda function.
   
-  Choose Skip at the bottom the Select blueprint pane.
+  Choose Skip at the bottom of the Select blueprint pane.
   
   Choose a name (e.g. ec2-starter) and a description.
   
@@ -84,7 +84,7 @@ Node.js and npm.
   
   Upload your starter.zip file.
   
-  For Role, choose the Lambda execution role you created earlier, LambdaEC2SwitcherRole.
+  For Role, choose the Lambda execution role you created earlier (e.g. LambdaEC2SwitcherRole).
   
   Choose Next and then Create function.
   
