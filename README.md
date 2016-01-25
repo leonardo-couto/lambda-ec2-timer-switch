@@ -128,3 +128,19 @@ Node.js and npm.
   Repeat all the steps above to create a new Lambda function for your stopper.zip file.
   
 ### Append an event source
+
+  Open your Lambda function (`ec2-starter`) at https://console.aws.amazon.com/lambda/.
+  
+  Choose the Event sources tab.
+  
+  Click to Add event source.
+  
+  Choose CloudWatch Events - Schedule for Event source type.
+  
+  Choose Rule name and description.
+  
+  Use a cron expression for the Schedule expression, e.g., `cron(0 10 ? * MON-FRI *)` to start your machine every week day at 10am (UTC).
+  
+  Pick the enable now radio button and Submit.
+  
+  Repeat the above steps for the `ec2-stopper` function, and choose a shutdown time.
