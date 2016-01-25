@@ -15,11 +15,11 @@ Node.js and npm.
 
   Fork and clone this project.
 
-  Change the INSTANCE_ID in both **lambda-ec2-starter/index.js** and **lambda-ec2-stopper/index.js** files to your EC2 machine instance id.
+  Change the INSTANCE_ID in both `lambda-ec2-starter/index.js` and `lambda-ec2-stopper/index.js` files to your EC2 machine instance id.
 
-  Run **npm install** in both **lambda-ec2-starter** and **lambda-ec2-stopper** folder.
+  Run `npm install` in both `lambda-ec2-starter` and `lambda-ec2-stopper` folders.
 
-  Zip the content of **lambda-ec2-starter** folder to a **starter.zip** file and the content of **lambda-ec2-stopper** to **stopper.zip**.
+  Zip the content of `lambda-ec2-starter` folder to a **starter.zip** file and the content of `lambda-ec2-stopper` to **stopper.zip**.
 
 * **Create a new Lambda function**
 * **Append an event source**
