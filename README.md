@@ -68,7 +68,7 @@ Node.js and npm.
   
   Select Create Your Own Policy.
   
-  Choose a name (e.g. LambdaEC2SwitcherPolicy) and a description.
+  Choose a name (e.g. `LambdaEC2SwitcherPolicy`) and a description.
   
   Paste the JSON below in the Policy Document text area and then click on Create Policy.
   
@@ -97,11 +97,11 @@ Node.js and npm.
   
   Choose Create New Role.
   
-  Use LambdaEC2SwitcherRole or some similar name to Role Name.
+  Use `LambdaEC2SwitcherRole` or some similar name to Role Name.
   
   Select AWS Lambda.
   
-  Check the LambdaEC2SwitcherPolicy box in the policies list (use the filter to find it).
+  Check the `LambdaEC2SwitcherPolicy` box in the policies list (use the filter to find it).
   
   Choose Next Step and then Create Role.
 
@@ -121,7 +121,7 @@ Node.js and npm.
   
   Upload your starter.zip file.
   
-  For Role, choose the Lambda execution role you created earlier (e.g. LambdaEC2SwitcherRole).
+  For Role, choose the Lambda execution role you created earlier (e.g. `LambdaEC2SwitcherRole`).
   
   Choose Next and then Create function.
   
