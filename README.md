@@ -22,4 +22,25 @@ Node.js and npm.
   Zip the content of `lambda-ec2-starter` folder to a **starter.zip** file and the content of `lambda-ec2-stopper` to **stopper.zip**.
 
 * **Create a new Lambda function**
+
+  Open the AWS Lambda console at https://console.aws.amazon.com/lambda/
+  
+  If a welcome page appears, choose Get Started Now. If the Lambda: Function list page appears, choose Create a Lambda function.
+  
+  Choose Skip at the bottom the Select blueprint pane.
+  
+  Choose a name (e.g. ec2-starter) and a description.
+  
+  For Runtime, choose Node.js.
+  
+  In Code entry type choose Upload a .ZIP file.
+  
+  Upload your starter.zip file.
+  
+  For Role, choose the Lambda execution role you created earlier, LambdaEC2SwitcherRole.
+  
+  Choose Next and then Create function.
+  
+  Repeat all the steps above to create a new Lambda function for your stopper.zip file.
+  
 * **Append an event source**
