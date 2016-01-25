@@ -10,7 +10,7 @@ Node.js and npm.
 
 ## HOWTO
 
-**Create an IAM User (Optional)**
+### Create an IAM User (Optional)
 
   More info about creating IAM users:
 
@@ -48,7 +48,7 @@ Node.js and npm.
   }
   ```
 
-**Build the zip archives**
+### Build the zip archives
 
   Fork and clone this project.
 
@@ -58,7 +58,7 @@ Node.js and npm.
 
   Zip the content of `lambda-ec2-starter` folder to a `starter.zip` file and the content of `lambda-ec2-stopper` to `stopper.zip`.
   
-**Create an execution role and policy**
+### Create an execution role and policy
 
   Open the IAM console: https://console.aws.amazon.com/iam/.
   
@@ -105,7 +105,7 @@ Node.js and npm.
   
   Choose Next Step and then Create Role.
 
-**Create a new Lambda function**
+### Create a new Lambda function
 
   Open the AWS Lambda console at https://console.aws.amazon.com/lambda/.
   
@@ -127,4 +127,4 @@ Node.js and npm.
   
   Repeat all the steps above to create a new Lambda function for your stopper.zip file.
   
-**Append an event source**
+### Append an event source
