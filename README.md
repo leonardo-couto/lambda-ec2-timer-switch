@@ -10,21 +10,45 @@ Node.js and npm.
 
 ## HOWTO
 
-* **Create an IAM User (Optional)**
+**Create an IAM User (Optional)**
 
   More info about creating IAM users:
 
   http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html
+  
   http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html
   
-  If you are creating a new user, you need at least the following permissions:
+  If you are creating a new user, you need to have at least the following permissions:
   
   ```javascript
-    {}
+  {
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Effect": "Allow",
+              "Action": [
+                  "ec2:Describe*",
+                  "ec2:Start*",
+                  "ec2:RunInstances",
+                  "ec2:Stop*",
+                  "iam:CreateRole",
+                  "iam:ListRoles",
+                  "iam:PassRole",
+                  "iam:PutRolePolicy",
+                  "lambda:AddPermission",
+                  "lambda:CreateFunction",
+                  "lambda:GetFunction",
+                  "lambda:GetPolicy",
+                  "lambda:ListFunctions",
+                  "lambda:UpdateFunctionCode"
+              ],
+              "Resource": "*"
+          }
+      ]
+  }
   ```
 
-
-* **Build the zip archives**
+**Build the zip archives**
 
   Fork and clone this project.
 
@@ -32,9 +56,9 @@ Node.js and npm.
 
   Run `npm install` in both `lambda-ec2-starter` and `lambda-ec2-stopper` folders.
 
-  Zip the content of `lambda-ec2-starter` folder to a **starter.zip** file and the content of `lambda-ec2-stopper` to **stopper.zip**.
+  Zip the content of `lambda-ec2-starter` folder to a `starter.zip` file and the content of `lambda-ec2-stopper` to `stopper.zip`.
   
-* **Create an execution role and policy**
+**Create an execution role and policy**
 
   Open the IAM console: https://console.aws.amazon.com/iam/.
   
@@ -81,7 +105,7 @@ Node.js and npm.
   
   Choose Next Step and then Create Role.
 
-* **Create a new Lambda function**
+**Create a new Lambda function**
 
   Open the AWS Lambda console at https://console.aws.amazon.com/lambda/.
   
@@ -103,4 +127,4 @@ Node.js and npm.
   
   Repeat all the steps above to create a new Lambda function for your stopper.zip file.
   
-* **Append an event source**
+**Append an event source**
