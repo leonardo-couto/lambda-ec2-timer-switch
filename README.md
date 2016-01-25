@@ -31,7 +31,7 @@ Node.js and npm.
   
   Select Create Your Own Policy.
   
-  Choose a name (e.g. LambdaEC2SwitcherPolicy) and a description
+  Choose a name (e.g. LambdaEC2SwitcherPolicy) and a description.
   
   Paste the JSON below in the Policy Document text area and then click on Create Policy.
   
@@ -70,7 +70,7 @@ Node.js and npm.
 
 * **Create a new Lambda function**
 
-  Open the AWS Lambda console at https://console.aws.amazon.com/lambda/
+  Open the AWS Lambda console at https://console.aws.amazon.com/lambda/.
   
   If a welcome page appears, choose Get Started Now. If the Lambda: Function list page appears, choose Create a Lambda function.
   
