@@ -62,17 +62,17 @@ Node.js, Npm and Grunt.
   
 ### Create an execution role and policy
 
-  Open the IAM console: https://console.aws.amazon.com/iam/.
+  1 - Open the IAM console: https://console.aws.amazon.com/iam/.
   
-  In the Details area, choose Policies.
+  2 - In the Details area, choose Policies.
   
-  Choose Create Policy.
+  3 - Choose Create Policy.
   
-  Select Create Your Own Policy.
+  4 - Select Create Your Own Policy.
   
-  Choose a name (e.g. `LambdaEC2SwitcherPolicy`) and a description.
+  5 - Choose a name (e.g. `LambdaEC2SwitcherPolicy`) and a description.
   
-  Paste the JSON below in the Policy Document text area and then click on Create Policy.
+  6 - Paste the JSON below in the Policy Document text area and then click on Create Policy.
   
   ```javascript
   {
@@ -95,54 +95,54 @@ Node.js, Npm and Grunt.
   }
   ```
   
-  In the Details area, choose Roles.
+  7 - In the Details area, choose Roles.
   
-  Choose Create New Role.
+  8 - Choose Create New Role.
   
-  Use `LambdaEC2SwitcherRole` or some similar name to Role Name.
+  9 - Use `LambdaEC2SwitcherRole` or some similar name to Role Name.
   
-  Select AWS Lambda.
+  10 - Select AWS Lambda.
   
-  Check the `LambdaEC2SwitcherPolicy` box in the policies list (use the filter to find it).
+  11 - Check the `LambdaEC2SwitcherPolicy` box in the policies list (use the filter to find it).
   
-  Choose Next Step and then Create Role.
+  12 - Choose Next Step and then Create Role.
 
 ### Create a new Lambda function
 
-  Open the AWS Lambda console at https://console.aws.amazon.com/lambda/.
+  1 - Open the AWS Lambda console at https://console.aws.amazon.com/lambda/.
   
-  If a welcome page appears, choose Get Started Now. Else, choose Create a Lambda function.
+  2 - If a welcome page appears, choose Get Started Now. Else, choose Create a Lambda function.
   
-  Choose Skip at the bottom of the Select blueprint pane.
+  3 - Choose Skip at the bottom of the Select blueprint pane.
   
-  Choose a name (e.g. ec2-starter) and a description.
+  4 - Choose a name (e.g. ec2-starter) and a description.
   
-  For Runtime, choose Node.js.
+  5 - For Runtime, choose Node.js.
   
-  In Code entry type choose Upload a .ZIP file.
+  6 - In Code entry type choose Upload a .ZIP file.
   
-  Upload your starter.zip file.
+  7 - Upload your starter.zip file.
   
-  For Role, choose the Lambda execution role you created earlier (e.g. `LambdaEC2SwitcherRole`).
+  8 - For Role, choose the Lambda execution role you created earlier (e.g. `LambdaEC2SwitcherRole`).
   
-  Choose Next and then Create function.
+  9 - Choose Next and then Create function.
   
-  Repeat all the steps above to create a new Lambda function for your stopper.zip file.
+  10 - Repeat from step 1 to create a new Lambda function for your stopper.zip file.
   
 ### Append an event source
 
-  Open your Lambda function (`ec2-starter`) at https://console.aws.amazon.com/lambda/.
+  1 - Open your Lambda function (`ec2-starter`) at https://console.aws.amazon.com/lambda/.
   
-  Choose the Event sources tab.
+  2 - Choose the Event sources tab.
   
-  Click to Add event source.
+  3 - Click to Add event source.
   
-  Choose CloudWatch Events - Schedule for Event source type.
+  4 - Choose CloudWatch Events - Schedule for Event source type.
   
-  Choose Rule name and description.
+  5 - Choose Rule name and description.
   
-  Use a cron expression for the Schedule expression, e.g., `cron(0 10 ? * MON-FRI *)` to start your machine every week day at 10am (UTC).
+  6 - Use a cron expression for the Schedule expression, e.g., `cron(0 10 ? * MON-FRI *)` to start your machine every week day at 10am (UTC).
   
-  Pick the enable now radio button and Submit.
+  7 - Pick the enable now radio button and Submit.
   
-  Repeat the above steps for the `ec2-stopper` function, and choose a shutdown time.
+  8 - Repeat from step 1 for the `ec2-stopper` function and choose a shutdown time.
