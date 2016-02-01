@@ -6,7 +6,7 @@ This is an alternative way using AWS Lambda.
 
 ## Prerequisites
 
-Node.js and npm.
+Node.js, Npm and Grunt.
 
 ## HOWTO
 
@@ -50,13 +50,15 @@ Node.js and npm.
 
 ### Build the zip archives
 
-  Clone this project.
+  1 - Clone this project.
 
-  Run `npm install`.
+  2 - In the project root directory run `npm install`.
 
-  Run `grunt build --id=INSTANCE_ID`. Where INSTANCE_ID is the id of your EC2 machine, or a comma separated list of ids. This will create a `starter.zip` file and `stopper.zip` in the `target` folder.
+  3 - Run `grunt build --id=INSTANCE_ID`. Where INSTANCE_ID is the id of your EC2 machine, or a comma separated list of ids.
+  
+  This will create a `starter.zip` file and `stopper.zip` in the `target` folder.
 
-  You can also change `config.json` with your EC2 machine instance id. 
+  To avoid typing your instance id in the grunt build param you can put it on `config.json` file. 
   
 ### Create an execution role and policy
 
