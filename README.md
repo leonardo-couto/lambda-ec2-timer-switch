@@ -50,13 +50,13 @@ Node.js and npm.
 
 ### Build the zip archives
 
-  Fork and clone this project.
+  Clone this project.
 
-  Change the INSTANCE_ID in both `lambda-ec2-starter/index.js` and `lambda-ec2-stopper/index.js` files to your EC2 machine instance id.
+  Run `npm install`.
 
-  Run `npm install` in both `lambda-ec2-starter` and `lambda-ec2-stopper` folders.
+  Run `grunt build --id=INSTANCE_ID`. Where INSTANCE_ID is the id of your EC2 machine, or a comma separated list of ids. This will create a `starter.zip` file and `stopper.zip` in the `target` folder.
 
-  Zip the content of `lambda-ec2-starter` folder to a `starter.zip` file and the content of `lambda-ec2-stopper` to `stopper.zip`.
+  You can also change `config.json` with your EC2 machine instance id. 
   
 ### Create an execution role and policy
 
