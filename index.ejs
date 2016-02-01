@@ -13,11 +13,11 @@ exports.handler = function(event, context) {
 
   var params = { 
     InstanceIds: id,
-    AdditionalInfo: 'Automatic startup/shutdown (Lambda)',
     DryRun: false
   };
 
   if (starter) {
+    params.AdditionalInfo = "Automatic startup (Lambda)";
     ec2.startInstances(params, callback);
   } else {
     ec2.stopInstances(params, callback);
