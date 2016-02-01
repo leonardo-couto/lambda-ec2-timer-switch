@@ -54,11 +54,13 @@ Node.js, Npm and Grunt.
 
   2 - In the project root directory run `npm install`.
 
-  3 - Run `grunt build --id=INSTANCE_ID`. Where INSTANCE_ID is the id of your EC2 machine, or a comma separated list of ids.
+  3 - Run `grunt build --id=INSTANCE_ID`. Where INSTANCE_ID is the id of your EC2 machine.
   
   This will create a `starter.zip` file and `stopper.zip` in the `target` folder.
 
-  To avoid typing your instance id in the grunt build param you can put it on `config.json` file. 
+  To avoid typing your instance id in the grunt build param you can put it on `config.json` file.
+  
+  INSTANCE_ID may be a comma separated list of ids to schedule start/shutdown of multiple machines from the same account.
   
 ### Create an execution role and policy
 
