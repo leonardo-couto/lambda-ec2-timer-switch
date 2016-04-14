@@ -1,6 +1,6 @@
 var AWS = require('aws-sdk');
 
-var ec2 = new AWS.EC2();
+var ec2 = new AWS.EC2({ "region": "<%= region %>" });
 var starter = <%= starter %>;
 var id = "<%= id %>".split(",");
 

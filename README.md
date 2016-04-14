@@ -54,13 +54,15 @@ Node.js, Npm and Grunt.
 
   2 - In the project root directory run `npm install`.
 
-  3 - Run `grunt build --id=INSTANCE_ID`. Where INSTANCE_ID is the id of your EC2 machine.
+  3 - Run `grunt build --id=INSTANCE_ID --region=REGION`. Where INSTANCE_ID is the id of your EC2 machine and REGION is the region where your machine is running.
   
   This will create a `starter.zip` file and `stopper.zip` in the `target` folder.
 
-  To avoid typing your instance id in the grunt build param you can put it on `config.json` file.
+  To avoid typing your instance id and region in the grunt build param you can put it on `config.json` file.
   
   INSTANCE_ID may be a comma separated list of ids to schedule start/shutdown of multiple machines from the same account.
+
+  REGION must be one of us-east-1, us-west-1, sa-east-1, etc.
   
 ### Create an execution role and policy
 

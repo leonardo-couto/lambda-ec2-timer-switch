@@ -1,3 +1,4 @@
 {
-  "id" : "INSTANCE_ID"
+  "id" : "INSTANCE_ID",
+  "region" : "REGION"
 }

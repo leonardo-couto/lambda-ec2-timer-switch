@@ -6,6 +6,7 @@ module.exports = function(grunt) {
   });
 
   var instances = grunt.option("id") || grunt.config.get("config.id");
+  var region = grunt.option("region") || grunt.config.get("config.region");
 
   grunt.config("copy.modules", {
       expand: true,
@@ -21,6 +22,7 @@ module.exports = function(grunt) {
           return grunt.template.process(content, {
             data: {
               id: instances,
+              region: region,
               starter: true
             }
           });
@@ -44,6 +46,7 @@ module.exports = function(grunt) {
           return grunt.template.process(content, {
             data: {
               id: instances,
+              region: region,
               starter: false
             }
           });
